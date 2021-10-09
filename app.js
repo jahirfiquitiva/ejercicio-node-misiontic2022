@@ -15,6 +15,10 @@ app.use(express.json());
 
 app.use('/api/tasks', tasksRouter);
 
+app.get('*', (request, response) => {
+  return response.send('Not found!');
+});
+
 app.listen(port, function () {
-  console.log(chalk.green(`El servidor está listo en el puerto: ${port}!`))
-}) // 3000 // 0000~25000
+  console.log(chalk.green(`El servidor está listo en el puerto: ${port}!`));
+}); // 3000 // 0000~25000
