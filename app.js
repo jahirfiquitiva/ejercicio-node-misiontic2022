@@ -6,7 +6,7 @@ require('./driver/mongo-connection');
 
 const tasksRouter = require('./routes/tasks-routes');
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.json());
